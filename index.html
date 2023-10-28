@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EFEITO LUZ</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+
+<div class=" container">
+    <div class="card" style="--clr:rgb(255, 0, 149);"></div>
+    <div class="card" style="--clr:rgb(44, 190, 235);"></div>
+    <div class="card" style="--clr:rgb(173, 133, 0);"></div>
+   
+
+</div>
+
+<script>
+
+   let cards = document.querySelectorAll('.card');
+   cards.forEach(card => {
+        card.onmousemove = function(e){
+            let x = e.pageX - card.offsetLeft;
+            let y = e.pageY - card.offsetTop;
+
+            card.style.setProperty('--x', x + 'px');
+            card.style.setProperty('--y', y + 'px');
+        }
+   });
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
